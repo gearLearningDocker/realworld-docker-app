@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  frontend:
+    command: npm run start:dev
+    volumes:
+      - ./frontend-side/src:/usr/src/app/src
