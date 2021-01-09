@@ -16,7 +16,12 @@ startServer = () => {
     const post = new Post({ name: 'New Post' })
     post.save((error, post) => {
       if (error) return console.log(error)
-      console.log('saved post is: ', post)
+      console.log('Saved post is: ', post)
+    })
+
+    Post.find((err, posts) => {
+      if (err) return console.log(err)
+      console.log('posts in db:', posts)
     })
   })
 }

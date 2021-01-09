@@ -16,3 +16,8 @@ services:
 
   backend:
     image: mongo:latest
+    volumes:
+      - mongo_db:/data/db
+
+volumes:
+  mongo_db:
